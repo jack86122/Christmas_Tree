@@ -13,20 +13,19 @@
 
 <body>
 
-    <!-- <input type="text"  id="num1" value="">
+     <input type="text"  id="num1" name="num1">
         <input type="button" id="num1" value="送出" onclick="processFormDota()">
-  -->
+  
     <p id="demo"></p>
     <script>
-        var star = "";
-
-        // var x ="";
-        // function processFormDota(num1) {
-
-        //     x = document.getElementById("num1").innerHTML
-        //     console.log(document.getElementById("num1").innerHTML);
-        //     console.log(x);
-        // }
+        var y ="";
+        function processFormDota(num1) {
+            
+            y = y+document.getElementById("num1").value;
+            
+            
+            console.log(y);
+        
         // ※ 注意要用全形的＊和全形的空白 ※
 
         // 分解動作
@@ -38,11 +37,12 @@
         //    第三列：1=>1、7=>7
         //    第四列：
         // 3. 觀察星星中間位置: 中間位置 = 最終列
-        var x = 5;
+        var star = "";
+        // var x = 5;
         var i = 1;
         var j = 1;
-        for (i = 1; i <= x; i++) {
-            for (j = 1; j <= x - i; j++) {
+        for (i = 1; i <= y; i++) {
+            for (j = 1; j <= y - i; j++) {
                 star =  star+"　";
             }
             for (k = 1; k <= 2 * i - 1; k++) {
@@ -50,8 +50,9 @@
 
             }
             star = star + "<br>"
+        }document.getElementById('demo').innerHTML = star;
         }
-        document.getElementById('demo').innerHTML = star;
+        
 
 
 
